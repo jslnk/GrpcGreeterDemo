@@ -19,7 +19,7 @@ namespace GrpcGreeterDemoClient
             //Console.ReadKey();
 
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
-            var client = new Greeter.GreeterClient(channel); // new GrpcGreeterDemo.Greeter();
+            var client = new Greeter.GreeterClient(channel); 
             var reply = await client.SayHelloAsync(new HelloRequest { Name = "Jeongseon" });
             Console.WriteLine("here is the message from server side :" + reply.Message);
             Console.ReadKey();
